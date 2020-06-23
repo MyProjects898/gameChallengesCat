@@ -13,11 +13,14 @@ var numberToGues = Math.floor(Math.random() * 100) +1;
 
 if (letsTry === numberToGues){
     alert ("how did you do it? You are correct")
-} else if(letsTry == " " || letsTry == null){
+} else if(letsTry == "" || letsTry == null || letsTry > 101 ){
     alert ("what is wrong with you? no this aint right!!!")
-} else{
-    alert ("the number was" + ' ' + numberToGues)
+} else if (letsTry > numberToGues){
+    alert ("went to high!")
+} else if (letsTry < numberToGues){
+    alert("went to low : (")
 }
+  alert ("the number was" + ' ' + numberToGues)
 
 
 
